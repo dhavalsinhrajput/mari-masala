@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mari Masala</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Mari Masala</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="images/bg.mp4.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Welcome to Mari Masala</h1>
+    <p>Premium Spices</p>
+
+    <button onclick="orderNow('Hello, I want to order')">
+      Order on WhatsApp
+    </button>
+  </div>
+
+</section>
+
+
+<section class="products">
+
+  <h2>Our Spices</h2>
+
+  <div class="product-grid">
+
+    <!-- HALDI -->
+    <div class="product">
+      <img src="images/haldi.jpg.jpg">
+      <h3>Haldi Powder</h3>
+      <p>Pure & Fresh</p>
+      <button onclick="orderNow('Haldi Powder')">Order</button>
+    </div>
+
+    <!-- MIRCHI -->
+    <div class="product">
+      <img src="images/mirchi.jpg.jpg">
+      <h3>Red Chilli</h3>
+      <p>Rich Color</p>
+      <button onclick="orderNow('Red Chilli')">Order</button>
+    </div>
+
+    <!-- GARAM -->
+    <div class="product">
+      <img src="images/garam.jpg.jpg">
+      <h3>Garam Masala</h3>
+      <p>Authentic Taste</p>
+      <button onclick="orderNow('Garam Masala')">Order</button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/917567789122" class="whatsapp-float" target="_blank">
+  💬
+</a>
+
+
+<script>
+function orderNow(product){
+  var phone = "917567789122";
+  var message = "I want " + product;
+  var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
